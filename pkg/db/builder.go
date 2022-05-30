@@ -75,7 +75,7 @@ func getNdaysData(data *dto.Data, days int) ([]map[string]string, error) {
 			value["date"] = tradingDate.Format(FORMAT)
 			nDaysData = append(nDaysData, value)
 		}
-		tradingDate, err = getPreviousTradingDate(tradingDate.AddDate(0, 0, -i), data)
+		tradingDate, err = getPreviousTradingDate(tradingDate.AddDate(0, 0, -1), data)
 		if err != nil {
 			log.Printf("[WARN] No trading date found in data from %s", tradingDate.Format(FORMAT))
 			break
