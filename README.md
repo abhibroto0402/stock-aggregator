@@ -26,4 +26,4 @@
   $ ./target/stock-aggregator
   ```
 ### Test
-`go test ./tests`
+`go test -v ./tests`
