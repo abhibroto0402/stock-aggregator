@@ -20,6 +20,7 @@ func HandleGetStockAverage(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 	w.Write(jsonBytes)
 	duration := time.Since(start)
+	log.Printf("[INFO] %s", jsonBytes)
 	log.Printf("[INFO] Time taken by request:%fs\n", duration.Seconds())
 }
 

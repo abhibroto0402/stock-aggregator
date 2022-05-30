@@ -31,7 +31,6 @@ func BuildAverageStockRecord(stockName string, apiKey string, nDays string, url 
 	nDaysData, err := getNdaysData(data, numDays)
 	nDaysAverageClosingPrice := getNDaysAverageClosingPrice(nDaysData)
 	log.Printf("[INFO] Average Closing Price for %d days: %f\n", numDays, nDaysAverageClosingPrice)
-	log.Println(nDaysData)
 	return recordBuilderHelper(nDaysData, nDaysAverageClosingPrice, stockName)
 }
 
