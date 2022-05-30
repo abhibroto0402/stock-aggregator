@@ -25,6 +25,5 @@ func HandleGetStockAverage(w http.ResponseWriter, r *http.Request) {
 
 func newResponse() *resp.Record {
 	record := db.GetRecord()
-	log.Println(record)
 	return record
 }
