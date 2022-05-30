@@ -1,0 +1,14 @@
+package routes
+
+import (
+	"net/http"
+	h "stock-aggregator/pkg/handlers"
+)
+
+func Routes() {
+	http.HandleFunc("/stock-aggregate", h.HandleGetStockAverage)
+	err := http.ListenAndServe(":8080", nil)
+	if err != nil {
+		panic(err)
+	}
+}
